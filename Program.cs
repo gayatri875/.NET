@@ -1,21 +1,151 @@
-﻿using System;
+﻿//using System;
+//using System.Collections.Generic;
+
+//class Program
+//{
+//    static void Main(string[] args)
+//    {
+//        List<Employee> employees = new List<Employee>();
+
+//        PermanentEmployee e1 = new PermanentEmployee
+//        {
+//            EmployeeId = 101,
+//            Name = "Gayatri",
+//            Department = "IT"
+//        };
+//        e1.SetLeaveBalance();
+
+//        ContractEmployee e2 = new ContractEmployee
+//        {
+//            EmployeeId = 102,
+//            Name = "Rahul",
+//            Department = "HR"
+//        };
+//        e2.SetLeaveBalance();
+
+//        PermanentEmployee e3 = new PermanentEmployee
+//        {
+//            EmployeeId = 103,
+//            Name = "Amit",
+//            Department = "Finance"
+//        };
+//        e3.SetLeaveBalance();
+
+//        ContractEmployee e4 = new ContractEmployee
+//        {
+//            EmployeeId = 104,
+//            Name = "Sneha",
+//            Department = "Marketing"
+//        };
+//        e4.SetLeaveBalance();
+
+//        employees.Add(e1);
+//        employees.Add(e2);
+//        employees.Add(e3);
+//        employees.Add(e4);
+
+//        Console.WriteLine("===== Employees =====");
+
+//        foreach (Employee emp in employees)
+//        {
+//            emp.DisplayDetails();
+//        }
+
+//        List<LeaveRequest> leaves = new List<LeaveRequest>()
+//        {
+//            new LeaveRequest
+//            {
+//                LeaveId = 1,
+//                EmployeeId = 101,
+//                NumberOfDays = 2,
+//                Reason = "Medical"
+//            },
+
+//            new LeaveRequest
+//            {
+//                LeaveId = 2,
+//                EmployeeId = 103,
+//                NumberOfDays = 4,
+//                Reason = "Family Function"
+//            }
+//        };
+
+//        Console.WriteLine("\n===== Leave Requests =====");
+
+//        foreach (LeaveRequest leave in leaves)
+//        {
+//            leave.DisplayLeave();
+//        }
+
+//        Console.WriteLine("\n===== Permanent Employees =====");
+
+//        foreach (Employee emp in employees)
+//        {
+//            if (emp is PermanentEmployee)
+//            {
+//                emp.DisplayDetails();
+//            }
+//        }
+
+//        Console.WriteLine("\n===== Employee ID 103 =====");
+
+//        Employee? found = employees.Find(e => e.EmployeeId == 103);
+//        if (found != null)
+//        {
+//            found.DisplayDetails();
+//        }
+//        else
+//        {
+//            Console.WriteLine("Employee not found.");
+//        }
+//        Console.WriteLine($"\nTotal Employees : {employees.Count}");
+//        Console.WriteLine($"Total Leave Requests : {leaves.Count}");
+//    }
+//}
+
+using System;
+
 class Program
 {
-    static void Main(String[] args)
+    static void Main(string[] args)
     {
+        // ==========================
+        // Encapsulation
+        // ==========================
 
+        Encapsulation s = new Encapsulation();
+        s.Id = 101;
+        s.Name = "Gayatri";
 
-        List<int> num = new List<int>();
-        num.Add(12);
-        num.Add(14);
-        num.Add(662);
-        num.Add(92);
-        num.Add(55);
-        num.Add(67);
+        Console.WriteLine("===== Encapsulation =====");
+        s.Display();
 
-        foreach(int n in num)
-        {
-            Console.WriteLine(n);
-        }
+        // ==========================
+        // Inheritance
+        // ==========================
+
+        Dog d = new Dog();
+
+        Console.WriteLine("\n===== Inheritance =====");
+        d.Eat();
+        d.Bark();
+
+        // ==========================
+        // Abstraction
+        // ==========================
+
+        Shape shape = new Circle();
+
+        Console.WriteLine("\n===== Abstraction =====");
+        shape.Draw();
+
+        // ==========================
+        // Polymorphism
+        // ==========================
+
+        Vehicle v = new Car();
+
+        Console.WriteLine("\n===== Polymorphism =====");
+        v.Start();
     }
 }
