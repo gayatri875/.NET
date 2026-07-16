@@ -1,0 +1,83 @@
+﻿@model List<EmployeeManagementSystem.Models.Employee>
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Employee Details</title>
+
+    <style>
+            body {
+                font-family: Arial;
+                background-color: #f2f2f2;
+            }
+
+            h2 {
+                text-align: center;
+                color: darkblue;
+            }
+
+            table {
+                width: 80%;
+                margin: auto;
+                border-collapse: collapse;
+                background-color: white;
+            }
+
+            th {
+                background-color: darkblue;
+                color: white;
+                padding: 10px;
+            }
+
+            td {
+                text-align: center;
+                padding: 10px;
+            }
+
+            tr:nth-child(even) {
+                background-color: #f2f2f2;
+            }
+
+            table, th, td {
+                border: 1px solid black;
+            }
+    </style>
+</head>
+<body>
+
+    <h2>Employee Details</h2>
+
+    <table>
+        <tr>
+            <th>Employee ID</th>
+            <th>Name</th>
+            <th>Department</th>
+            <th>Salary</th>
+            <th>Email</th>
+        </tr>
+
+        @foreach (var emp in Model)
+        {
+            <tr>
+                <td>@emp.EmployeeId</td>
+                <td>@emp.Name</td>
+                <td>@emp.Department</td>
+                <td>@emp.Salary</td>
+                <td>@emp.Email</td>
+            </tr>
+        }
+
+    </table>
+
+</body>
+</html>

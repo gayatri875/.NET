@@ -1,0 +1,71 @@
+﻿@model List<EmployeeManagementSystem.Models.Department>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Department Details</title>
+
+    <style>
+            body {
+                font-family: Arial;
+                background-color: #f2f2f2;
+            }
+
+            h2 {
+                text-align: center;
+                color: darkgreen;
+            }
+
+            table {
+                width: 80%;
+                margin: auto;
+                border-collapse: collapse;
+                background-color: white;
+            }
+
+            th {
+                background-color: darkgreen;
+                color: white;
+                padding: 10px;
+            }
+
+            td {
+                text-align: center;
+                padding: 10px;
+            }
+
+            tr:nth-child(even) {
+                background-color: #f2f2f2;
+            }
+
+            table, th, td {
+                border: 1px solid black;
+            }
+    </style>
+</head>
+<body>
+
+    <h2>Department Details</h2>
+
+    <table>
+        <tr>
+            <th>Department Name</th>
+            <th>Department Head</th>
+            <th>Head Contact</th>
+            <th>Head Email</th>
+        </tr>
+
+        @foreach (var dept in Model)
+        {
+            <tr>
+                <td>@dept.DepartmentName</td>
+                <td>@dept.DepartmentHead</td>
+                <td>@dept.HeadContact</td>
+                <td>@dept.HeadEmail</td>
+            </tr>
+        }
+
+    </table>
+
+</body>
+</html>
