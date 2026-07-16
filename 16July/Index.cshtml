@@ -1,0 +1,30 @@
+﻿@model IEnumerable< _16July.Models.Student>
+
+<div class="text-center">
+    <h1 class="display-4">Welcome to Students Portal</h1>
+</div>
+
+<div>
+    <table border="1" cellpadding="10">
+        <tr>
+            <th>ID</th>
+            <th>NAME</th>
+            <th>AGE</th>
+            <th>COURSE</th>
+            <th>QUALIFICATION</th>
+            <th>GENDER</th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Id</td>
+                <td>@item.Name</td>
+                <td>@item.Age</td>
+                <td>@item.Course</td>
+                <td>@item.Qualification</td>
+                <td>@item.Gender</td>
+            </tr>
+        }
+    </table>
+</div>
