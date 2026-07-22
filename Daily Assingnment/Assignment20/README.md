@@ -29,6 +29,7 @@ The Automobile Management System is an ASP.NET Core MVC application developed to
 
 ## Project Structure
 
+text
 AutomobileManagement
 │
 ├── Controllers
@@ -52,6 +53,7 @@ AutomobileManagement
 ├── Program.cs
 │
 └── AutomobileManagement.csproj
+```
 
 
 ## Concepts Used
