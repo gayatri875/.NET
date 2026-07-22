@@ -1,0 +1,82 @@
+﻿@model AutomobileManagement.Models.Automobile
+
+@{
+    ViewData["Title"] = "Automobile Registration";
+}
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-7">
+
+            <div class="card shadow-lg border-0 rounded-4">
+                <div class="card-header bg-primary text-white text-center rounded-top-4">
+                    <h2>🚗 Automobile Registration</h2>
+                </div>
+
+                <div class="card-body p-4">
+
+                    <form asp-action="Register" asp-controller="Automobile" method="post">
+
+                        <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
+
+                        <div class="mb-3">
+                            <label asp-for="VehicleId" class="form-label fw-bold"></label>
+                            <input asp-for="VehicleId" class="form-control" placeholder="Enter Vehicle ID" />
+                            <span asp-validation-for="VehicleId" class="text-danger"></span>
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="VehicleName" class="form-label fw-bold"></label>
+                            <input asp-for="VehicleName" class="form-control" placeholder="Enter Vehicle Name" />
+                            <span asp-validation-for="VehicleName" class="text-danger"></span>
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="Brand" class="form-label fw-bold"></label>
+                            <input asp-for="Brand" class="form-control" placeholder="Enter Brand Name" />
+                            <span asp-validation-for="Brand" class="text-danger"></span>
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="ModelYear" class="form-label fw-bold"></label>
+                            <input asp-for="ModelYear" class="form-control" placeholder="Enter Model Year" />
+                            <span asp-validation-for="ModelYear" class="text-danger"></span>
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="Price" class="form-label fw-bold"></label>
+                            <input asp-for="Price" class="form-control" placeholder="Enter Price" />
+                            <span asp-validation-for="Price" class="text-danger"></span>
+                        </div>
+
+                        <div class="mb-4">
+                            <label asp-for="FuelType" class="form-label fw-bold"></label>
+                            <select asp-for="FuelType" class="form-select">
+                                <option value="">-- Select Fuel Type --</option>
+                                <option>Petrol</option>
+                                <option>Diesel</option>
+                                <option>CNG</option>
+                                <option>Electric</option>
+                            </select>
+                            <span asp-validation-for="FuelType" class="text-danger"></span>
+                        </div>
+
+                        <div class="d-grid">
+                            <button type="submit" class="btn btn-primary btn-lg">
+                                Register Automobile
+                            </button>
+                        </div>
+
+                    </form>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+@section Scripts
+{
+    <partial name="_ValidationScriptsPartial" />
+}

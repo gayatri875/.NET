@@ -1,0 +1,35 @@
+﻿@{
+    ViewData["Title"] = "Registration Success";
+}
+
+<div class="container mt-5">
+    <div class="card shadow-lg border-0 rounded-4">
+        <div class="card-body text-center">
+
+            <h2 class="text-success">
+                Automobile Registered Successfully
+            </h2>
+
+            <hr />
+
+            <h4>Registered Vehicle Details</h4>
+
+            <p>
+                <strong>Vehicle Name:</strong>
+                @TempData["VehicleName"]
+            </p>
+
+            <p>
+                <strong>Brand:</strong>
+                @TempData["Brand"]
+            </p>
+
+            <a asp-controller="Manufacturer"
+               asp-action="Details"
+               class="btn btn-primary">
+                View Manufacturer Details
+            </a>
+
+        </div>
+    </div>
+</div>

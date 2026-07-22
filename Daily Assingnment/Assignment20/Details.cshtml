@@ -1,0 +1,84 @@
+﻿@model AutomobileManagement.Models.Manufacturer
+
+@{
+    ViewData["Title"] = "Manufacturer Details";
+}
+
+<div class="container mt-5">
+    <div class="card shadow-lg border-0 rounded-4">
+
+        <div class="card-header bg-dark text-white text-center">
+            <h2>Manufacturer Details</h2>
+        </div>
+
+        <div class="card-body">
+
+            <form asp-action="Details" asp-controller="Manufacturer" method="post">
+
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                <div class="mb-3">
+                    <label asp-for="ManufacturerName" class="form-label"></label>
+                    <input asp-for="ManufacturerName" class="form-control" />
+                    <span asp-validation-for="ManufacturerName" class="text-danger"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="Country" class="form-label"></label>
+                    <input asp-for="Country" class="form-control" />
+                    <span asp-validation-for="Country" class="text-danger"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="ContactNumber" class="form-label"></label>
+                    <input asp-for="ContactNumber" class="form-control" />
+                    <span asp-validation-for="ContactNumber" class="text-danger"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="EmailAddress" class="form-label"></label>
+                    <input asp-for="EmailAddress" class="form-control" />
+                    <span asp-validation-for="EmailAddress" class="text-danger"></span>
+                </div>
+
+                <button type="submit" class="btn btn-success">
+                    Save Manufacturer
+                </button>
+
+            </form>
+
+            @if (Model != null)
+            {
+                <hr />
+
+                <h4 class="mt-4">Manufacturer Information</h4>
+
+                <table class="table table-bordered table-striped">
+                    <thead class="table-dark">
+                        <tr>
+                            <th>Manufacturer Name</th>
+                            <th>Country</th>
+                            <th>Contact Number</th>
+                            <th>Email Address</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>@Model.ManufacturerName</td>
+                            <td>@Model.Country</td>
+                            <td>@Model.ContactNumber</td>
+                            <td>@Model.EmailAddress</td>
+                        </tr>
+                    </tbody>
+                </table>
+            }
+
+        </div>
+    </div>
+</div>
+
+@section Scripts
+{
+    <partial name="_ValidationScriptsPartial" />
+}
