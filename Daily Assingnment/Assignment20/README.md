@@ -30,19 +30,28 @@ The Automobile Management System is an ASP.NET Core MVC application developed to
 ## Project Structure
 
 AutomobileManagement
+│
 ├── Controllers
 │   ├── AutomobileController.cs
 │   └── ManufacturerController.cs
+│
 ├── Models
 │   ├── Automobile.cs
 │   └── Manufacturer.cs
+│
 ├── Views
 │   ├── Automobile
 │   │   ├── Register.cshtml
 │   │   └── Success.cshtml
+│   │
 │   └── Manufacturer
 │       └── Details.cshtml
-└── Program.cs
+│
+├── wwwroot
+│
+├── Program.cs
+│
+└── AutomobileManagement.csproj
 
 
 ## Concepts Used
