@@ -1,0 +1,14 @@
+﻿<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+</<div>
+
+@using (Html.BeginForm())
+{
+    <p>Username : <input type="text" name="username" /></p>
+    <p>Password : <input type="password" name="password" /></p>
+
+    <button type="submit">Login</button>
+
+
+    <p style="color:red">@ViewBag.Message</p>
+}
