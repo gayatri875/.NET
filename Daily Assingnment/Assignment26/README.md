@@ -136,7 +136,8 @@ Run the project and open the Swagger page to test:
 - DELETE
 
 Project Structure
-
+---
+```
 StudentManagementAPI
 │
 ├── Controllers
@@ -159,7 +160,8 @@ StudentManagementAPI
 ├── Program.cs
 ├── appsettings.json
 └── README.md
-
+```
+-----
 How to Run
 
 1. Open the project in Visual Studio.
