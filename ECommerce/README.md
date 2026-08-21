@@ -1,84 +1,16 @@
-# E-Commerce Order Management System
+# React + Vite
 
-A full-stack *E-Commerce Order Management System* developed using React.js, Vite, ASP.NET Core Web API, Entity Framework Core, and SQL Server.
+This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
 
-## 📌 Project Overview
+Currently, two official plugins are available:
 
-The E-Commerce Order Management System is designed to manage online shopping operations efficiently. It allows customers to browse and search products, manage their shopping cart, place orders, view order details, and request returns.
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
 
-Administrators can manage products, categories, customers, orders, shipping status, and returns.
+## React Compiler
 
-## 🚀 Features
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-### Customer
-- User registration and login
-- JWT-based authentication
-- Browse products
-- Search products
-- Filter products by category
-- View product details
-- Add products to cart
-- Update cart quantity
-- Remove products from cart
-- Place orders
-- View orders and order details
-- Request product returns
+## Expanding the Oxlint configuration
 
-### Admin
-- Admin authentication
-- Add, update, and delete products
-- Manage product categories
-- Manage product stock and price
-- View customer orders
-- Update order status
-- Manage shipping status
-- Manage return requests
-
-## 🛠️ Technologies Used
-
-### Frontend
-- React.js
-- Vite
-- JavaScript
-- HTML
-- CSS
-
-### Backend
-- ASP.NET Core Web API
-- C#
-- Entity Framework Core
-- JWT Authentication
-- Repository Pattern
-- Service Layer
-
-### Database
-- Microsoft SQL Server
-
-### Tools
-- Visual Studio / Visual Studio Code
-- Swagger
-- Git
-- GitHub
-- npm
-
-## 🏗️ Project Architecture
-
-```text
-ECommerceProject
-│
-├── ECommerceFrontend
-│   ├── src
-│   ├── components
-│   ├── pages
-│   ├── services
-│   └── App.jsx
-│
-└── ECommerce
-    ├── Controllers
-    ├── Services
-    ├── Repository
-    ├── RepositoryImplementation
-    ├── Models
-    ├── Data
-    ├── Middleware
-    └── Program.cs
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
